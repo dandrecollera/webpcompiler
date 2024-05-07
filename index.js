@@ -4,12 +4,10 @@ const sharp = require("sharp");
 const inputFolder = "inputs";
 const outputFolder = "output100";
 
-// Create output folder if it doesn't exist
 if (!fs.existsSync(outputFolder)) {
     fs.mkdirSync(outputFolder);
 }
 
-// Get a list of files in the input folder
 fs.readdir(inputFolder, (err, files) => {
     if (err) {
         console.error(err);
